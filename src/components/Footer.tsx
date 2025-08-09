@@ -10,17 +10,6 @@ export function Footer() {
     { label: 'お問い合わせ', href: '#contact', index: '06' }
   ]
 
-  const companyInfo = [
-    { label: 'プライバシーポリシー', href: '#privacy' },
-    { label: '利用規約', href: '#terms' },
-    { label: 'FAQ', href: '#faq' }
-  ]
-
-  const socialLinks = [
-    { label: 'Twitter', href: '#', icon: '𝕏' },
-    { label: 'LinkedIn', href: '#', icon: 'in' },
-    { label: 'GitHub', href: '#', icon: 'gh' }
-  ]
 
   return (
     <footer className="bg-[var(--color-bg-primary)] border-t border-[var(--color-border)] relative">

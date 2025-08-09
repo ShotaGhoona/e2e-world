@@ -102,13 +102,13 @@ export function About() {
               <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-[var(--color-accent-primary)]" />
               
               <div className="font-mono text-sm text-[var(--color-text-meta)] mb-4">
-                // MISSION STATEMENT
+                {'// MISSION STATEMENT'}
               </div>
               <blockquote className="text-xl md:text-2xl text-[var(--color-text-primary)] leading-relaxed font-light">
-                "デジタル技術で両国の未来を創造し、
+                &ldquo;デジタル技術で両国の未来を創造し、
                 <br />
                 <span className="text-[var(--color-accent-primary)] font-medium">人と人、技術と技術、夢と現実</span>
-                を繋ぐ架け橋となる。"
+                を繋ぐ架け橋となる。&rdquo;
               </blockquote>
             </div>
           </div>
@@ -215,7 +215,7 @@ export function About() {
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-transparent via-[var(--color-bg-secondary)]/20 to-transparent border-y border-[var(--color-border)] py-12">
           <div className="font-mono text-sm text-[var(--color-text-meta)] mb-4">
-            // READY TO START YOUR JOURNEY?
+            {'// READY TO START YOUR JOURNEY?'}
           </div>
           <h3 className="font-mono text-2xl md:text-3xl font-black text-[var(--color-text-primary)] mb-6">
             未来を創る仲間になりませんか？

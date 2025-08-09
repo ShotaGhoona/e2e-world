@@ -62,7 +62,7 @@ export function Hero() {
           
           {/* Meta Information */}
           <div className="font-mono text-sm text-[var(--color-text-primary)] ml-8">
-            <span>// 次世代デジタル人材育成プロジェクト v2.0.1</span>
+            <span>{'// 次世代デジタル人材育成プロジェクト v2.0.1'}</span>
           </div>
 
           {/* Main Title with <e2e> styling - Consistent Typography */}
@@ -75,7 +75,7 @@ export function Hero() {
               </div>
               
               <div className="text-lg md:text-3xl text-[var(--color-text-primary)] font-normal mb-4">
-                <span className="text-[var(--color-text-meta)]">// </span>Cross-Border AI Talent Development
+                <span className="text-[var(--color-text-meta)]">{'// '}</span>Cross-Border AI Talent Development
               </div>
               
               <div>
@@ -90,11 +90,11 @@ export function Hero() {
           <div className="ml-8">
             <div className="font-mono text-lg md:text-xl text-[var(--color-text-support)] space-y-2">
               <div>
-                <span className="text-[var(--color-text-meta)]">// </span>
+                <span className="text-[var(--color-text-meta)]">{'// '}</span>
                 <span className="text-[var(--color-text-primary)]">日本とインドネシアの架け橋となるAI人材育成プロジェクト。</span>
               </div>
               <div>
-                <span className="text-[var(--color-text-meta)]">// </span>
+                <span className="text-[var(--color-text-meta)]">{'// '}</span>
                 <span className="text-[var(--color-text-primary)]">産学官連携により、次世代のデジタル人材を育成し、両国の持続的な発展に貢献します。</span>
               </div>
             </div>
