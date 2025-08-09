@@ -9,10 +9,10 @@
 ## デザイン哲学
 
 - **構造的美学**: 建築的・工学的な美しさを追求し、構造そのものを美的要素として活用
-- **技術的合理性**: 機能性と美しさの完璧な融合、無駄のない論理的デザイン
+- **技術的合理性**: 機能性と美しさの融合、無駄のない論理的デザイン
 - **コード美学**: プログラミングの世界観をビジュアルデザインに翻訳、開発者への共感的訴求
 - **システム思考**: 情報を体系化し、階層構造として論理的に配置
-- **精密性重視**: 数値、メトリクス、技術的詳細の正確な表現
+- **アクセント活用**: #FAD526を効果的に使用し、技術的でありながら親しみやすさを表現
 
 ## 視覚的要素
 
@@ -33,9 +33,53 @@
 
 **Accent Colors:**
 
-- **System Green** (#10B981) - ステータス表示、アクティブ状態
-- **Terminal Green** (#22C55E) - ターミナル風プロンプト
+- **Primary Accent** (#FAD526) - メインアクセント、重要なCTA、強調表示
+- **System Green** (#10B981) - ステータス表示、成功状態
+- **Terminal Green** (#22C55E) - ターミナル風プロンプト、アクティブ状態
 - **Border Gray** (#E5E7EB, #D1D5DB) - 構造線、グリッドライン
+
+## ダークモード対応
+
+### ダークモードカラーパレット
+
+**Primary Colors (Dark):**
+
+- **Deep Dark** (#0D1117) - GitHub Dark inspired メイン背景
+- **Secondary Dark** (#161B22) - パネル背景、セクション分割
+- **Light Text** (#F0F6FC) - メインテキスト、高い可読性
+- **Secondary Text** (#C9D1D9) - セカンダリテキスト
+
+**Grayscale Hierarchy (Dark):**
+
+- **Support Text** (#8B949E) - サポートテキスト、変数値表示
+- **Meta Text** (#6E7681) - メタ情報、コメント風テキスト
+- **Dark Border** (#30363D) - 主要ボーダー
+- **Subtle Border** (#21262D) - 微細なセクション分割
+- **Strong Border** (#484F58) - 強調ボーダー
+
+**Accent Colors (Dark):**
+
+- **Primary Accent** (#FAD526) - 変更なし、ダークモードでも同じアクセント
+- **Success Dark** (#2EA043) - ステータス表示、成功状態
+- **Terminal Dark** (#39D353) - ターミナル風プロンプト、アクティブ状態
+
+### テーマ切り替え仕様
+
+**Implementation:**
+- CSS Variables による色管理
+- `[data-theme="dark"]` セレクタ使用
+- localStorage での設定保存
+- システム設定の自動検出
+- 200ms スムーズトランジション
+
+## ブランディング
+
+### ロゴ
+
+**Logo Specification:**
+- **Structure**: `</e2e>`
+- **Color Treatment**: `/` 部分のみアクセントカラー (#FAD526)、その他は黒 (#000000) またはコンテキストに応じた色
+- **Technical Aesthetic**: HTMLタグ風デザインでエンジニア向けアイデンティティを表現
 
 ### タイポグラフィ
 
@@ -75,7 +119,7 @@
 **Structural Elements:**
 
 - **Borders**: `border-r border-gray-200` - セクション分割
-- **Panels**: ターミナル風UI要素、技術情報パネル
+- **Panels**: ターミナル風UI要素、技術情報パネル（**注意**: 読みやすさを考慮し、Heroセクション等の限定的な場所で効果的に使用）
 - **Grid Overlay**: 建築図面風の構造線表示
 
 ## UI/UXパターン
@@ -90,8 +134,9 @@
 
 **Button Patterns:**
 
-- **Primary CTA**: `bg-gray-900 text-white` - 黒背景、白文字
+- **Primary CTA**: `bg-[#FAD526] text-black` - イエローアクセント、黒文字
 - **Secondary CTA**: `border border-gray-900` - アウトライン、ホバーで反転
+- **Accent CTA**: `bg-gray-900 text-white` - 黒背景、白文字（サブアクション）
 - **Function Style**: `VIEW_PROJECTS()`, `DOWNLOAD_CV()` - 関数風命名
 
 **Status Indicators:**
@@ -198,25 +243,27 @@
 
 ### 適用業界・分野
 
-**High-fit Industries:**
+**Primary Target (インドネシア中心のエンジニア養成機関):**
+
+- **Engineering Education**: プログラミング教育、技術研修、エンジニア養成
+- **Cross-border Tech Training**: 日本-インドネシア間の技術人材育成
+- **Developer Career Support**: エンジニアのキャリア形成、就職支援
+- **Technical Bootcamp**: 集中的なプログラミング訓練、スキルアップ
+
+**Secondary Applications:**
 
 - **Software Development**: 開発者向けツール、IDE、フレームワーク
 - **Developer Tools**: CI/CD、モニタリング、デバッグツール
 - **Technical Consulting**: システム設計、アーキテクチャ相談
-- **Open Source Projects**: OSS プロジェクト、技術コミュニティ
-
-**Medium-fit Industries:**
-
 - **SaaS Products**: 技術者がユーザーに含まれるサービス
-- **DevOps Tools**: インフラ管理、自動化ツール
-- **API Services**: 開発者向けAPI、プラットフォーム
-- **Technical Education**: プログラミング教育、技術研修
 
 ## 実装時の注意点
 
-### 技術的制約
+### 技術的制約・ユーザビリティ
 
 - **可読性確保**: モノスペースフォントの長文読解への配慮
+- **ターミナルUI使用制限**: ターミナル風UI要素は読みやすさが低下するため、Heroセクション等の効果的な場所に限定使用
+- **訴求力と読みやすさのバランス**: エンジニアライクなデザインを保ちつつ、ユーザーの理解しやすさを最優先に考慮
 - **レスポンシブ**: 12カラムグリッドのモバイル対応
 - **アクセシビリティ**: 高コントラスト確保、構造的マークアップ
 
