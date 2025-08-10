@@ -80,15 +80,18 @@ export function Hero() {
 
           {/* CTA Buttons - Left Aligned */}
           <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
-            <button className="group bg-[var(--color-accent-primary)] text-black px-8 py-4 font-mono font-medium text-lg hover:bg-[var(--color-accent-hover)] transition-all duration-200 border-2 border-[var(--color-accent-primary)] hover:border-[var(--color-accent-hover)] relative overflow-hidden">
-              <span className="relative z-10">START_TRAINING()</span>
-              <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-200" />
-            </button>
-            
-            <button className="group bg-[var(--color-bg-primary)]/90 backdrop-blur-sm text-[var(--color-text-primary)] px-8 py-4 font-mono font-medium text-lg border-2 border-[var(--color-border-strong)] hover:border-[var(--color-accent-primary)] hover:text-[var(--color-accent-primary)] transition-all duration-200 relative overflow-hidden">
-              <span className="relative z-10">VIEW_PROGRAMS()</span>
-              <div className="absolute inset-0 bg-[var(--color-accent-primary)] opacity-0 group-hover:opacity-5 transition-opacity duration-200" />
-            </button>
+            <a href="#curriculum">
+              <button className="group bg-[var(--color-accent-primary)] text-black px-8 py-4 font-mono font-medium text-lg hover:bg-[var(--color-accent-hover)] transition-all duration-200 border-2 border-[var(--color-accent-primary)] hover:border-[var(--color-accent-hover)] relative overflow-hidden">
+                <span className="relative z-10">START_TRAINING()</span>
+                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-200" />
+              </button>
+            </a>
+            <a href="#contact">
+              <button className="group bg-[var(--color-bg-primary)]/90 backdrop-blur-sm text-[var(--color-text-primary)] px-8 py-4 font-mono font-medium text-lg border-2 border-[var(--color-border-strong)] hover:border-[var(--color-accent-primary)] hover:text-[var(--color-accent-primary)] transition-all duration-200 relative overflow-hidden">
+                <span className="relative z-10">CONTACT_US()</span>
+                <div className="absolute inset-0 bg-[var(--color-accent-primary)] opacity-0 group-hover:opacity-5 transition-opacity duration-200" />
+              </button>
+            </a>
           </div>
 
         </div>

@@ -1,8 +1,8 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { SectionHeader } from './SectionHeader'
-import { SectionFooter } from './SectionFooter'
+import { SectionHeader } from '@/components/SectionHeader'
+import { SectionFooter } from '@/components/SectionFooter'
 
 export function About() {
   const [mounted, setMounted] = useState(false)
@@ -88,7 +88,7 @@ export function About() {
         <SectionHeader 
           index="01"
           category="ABOUT"
-          title="e2eとは"
+          title="</e2e>Worldとは"
           description="End-to-End Digital Talent Development - 日本とインドネシアを繋ぐ、次世代デジタル人材育成プロジェクト。技術革新と教育イノベーションの融合により、両国の持続的な発展を目指します。"
         />
         {/* Mission Statement */}
@@ -221,14 +221,18 @@ export function About() {
             未来を創る仲間になりませんか？
           </h3>
           <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
-            <button className="bg-[var(--color-accent-primary)] text-black px-8 py-4 font-mono font-medium hover:bg-[var(--color-accent-hover)] transition-all duration-200 border-2 border-[var(--color-accent-primary)] hover:border-[var(--color-accent-hover)] relative group">
-              <span className="relative z-10">LEARN_MORE()</span>
-              <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-200" />
-            </button>
-            <button className="bg-transparent border-2 border-[var(--color-border)] text-[var(--color-text-primary)] hover:border-[var(--color-accent-primary)] hover:text-[var(--color-accent-primary)] px-8 py-4 font-mono font-medium transition-all duration-200 relative group overflow-hidden">
-              <span className="relative z-10">CONTACT_US()</span>
-              <div className="absolute inset-0 bg-[var(--color-accent-primary)] opacity-0 group-hover:opacity-5 transition-opacity duration-200" />
-            </button>
+            <a href="#curriculum">
+              <button className="bg-[var(--color-accent-primary)] text-black px-8 py-4 font-mono font-medium hover:bg-[var(--color-accent-hover)] transition-all duration-200 border-2 border-[var(--color-accent-primary)] hover:border-[var(--color-accent-hover)] relative group">
+                <span className="relative z-10">LEARN_MORE()</span>
+                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-200" />
+              </button>
+            </a>
+            <a href="#contact">
+              <button className="bg-transparent border-2 border-[var(--color-border)] text-[var(--color-text-primary)] hover:border-[var(--color-accent-primary)] hover:text-[var(--color-accent-primary)] px-8 py-4 font-mono font-medium transition-all duration-200 relative group overflow-hidden">
+                <span className="relative z-10">CONTACT_US()</span>
+                <div className="absolute inset-0 bg-[var(--color-accent-primary)] opacity-0 group-hover:opacity-5 transition-opacity duration-200" />
+              </button>
+            </a>
           </div>
         </div>
 

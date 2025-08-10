@@ -1,6 +1,6 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/section/Hero";
-import { About } from "@/components/About";
+import { About } from "@/section/About";
 import { Curriculum } from "@/section/Curriculum";
 import { Partners } from "@/section/Partners";
 import { Universities } from "@/section/Universities";
