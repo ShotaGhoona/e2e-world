@@ -2,7 +2,7 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/section/Hero";
 import { About } from "@/section/About";
 import { Curriculum } from "@/section/Curriculum";
-import { Cooperators } from "@/section/Cooperators";
+import { ProjectTeam } from "@/section/ProjectTeam";
 import { Partners } from "@/section/Partners";
 import { News } from "@/section/News";
 import { Contact } from "@/section/Contact";
@@ -15,7 +15,7 @@ export default function Home() {
       <Hero />
       <About />
       <Curriculum />
-      <Cooperators />
+      <ProjectTeam />
       <Partners />
       <News />
       <Contact />

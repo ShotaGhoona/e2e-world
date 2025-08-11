@@ -10,7 +10,7 @@ export function Header() {
   const navigationItems = [
     { label: t('navigation.about'), href: '#about', index: '01' },
     { label: t('navigation.curriculum'), href: '#curriculum', index: '02' },
-    { label: t('navigation.cooperators'), href: '#partners', index: '03' },
+    { label: t('navigation.projectTeam'), href: '#partners', index: '03' },
     { label: t('navigation.partners'), href: '#universities', index: '04' },
     { label: t('navigation.news'), href: '#news', index: '05' },
   ]

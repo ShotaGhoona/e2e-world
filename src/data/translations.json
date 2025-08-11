@@ -7,7 +7,7 @@
       "navigation": {
         "about": "About PAI",
         "curriculum": "What You Learn", 
-        "cooperators": "Cooperators",
+        "projectTeam": "Project Team",
         "partners": "Partners",
         "news": "News",
         "contact": "Contact"
@@ -96,9 +96,9 @@
         },
         "footer": "LEARN BY DOING, GROW BY CREATING"
       },
-      "cooperators": {
-        "title": "Cooperators",
-        "description": "Building a comprehensive human resource development ecosystem through industry-academia-government collaboration.",
+      "projectTeam": {
+        "title": "Project Team",
+        "description": "Diverse team members with specialized expertise are realizing comprehensive human resource development programs.",
         "organizations": {
           "starup": {
             "title": "STARUP",
@@ -116,7 +116,7 @@
             "description": "Promoting policy formulation and institutional development related to digital human resource development. Supports sustainable human resource development ecosystem through promoting international talent exchange and building qualification certification systems."
           }
         },
-        "footer": "STRONGER TOGETHER, BRIGHTER FUTURE"
+        "footer": "ONE TEAM, ENDLESS POSSIBILITIES"
       },
       "partners": {
         "title": "Partners", 
@@ -192,7 +192,7 @@
       "navigation": {
         "about": "PAIとは",
         "curriculum": "学べること",
-        "cooperators": "協力団体", 
+        "projectTeam": "プロジェクトチーム", 
         "partners": "パートナー",
         "news": "お知らせ",
         "contact": "お問い合わせ"
@@ -259,9 +259,9 @@
         },
         "footer": "LEARN BY DOING, GROW BY CREATING"
       },
-      "cooperators": {
-        "title": "協力団体",
-        "description": "産学官連携により、包括的な人材育成エコシステムを構築しています。",
+      "projectTeam": {
+        "title": "プロジェクトチーム",
+        "description": "多様な専門性を持つチームメンバーが、包括的な人材育成プログラムを実現しています。",
         "organizations": {
           "starup": {
             "title": "STARUP",
@@ -279,7 +279,7 @@
             "description": "デジタル人材育成に関する政策立案と制度整備を推進。国際的な人材交流促進や資格認定制度の構築により、持続可能な人材育成エコシステムを支援します。"
           }
         },
-        "footer": "STRONGER TOGETHER, BRIGHTER FUTURE"
+        "footer": "ONE TEAM, ENDLESS POSSIBILITIES"
       },
       "partners": {
         "title": "パートナー", 
@@ -355,7 +355,7 @@
       "navigation": {
         "about": "Tentang PAI",
         "curriculum": "Yang Dipelajari",
-        "cooperators": "Mitra Kerjasama",
+        "projectTeam": "Tim Proyek",
         "partners": "Partners", 
         "news": "Berita",
         "contact": "Kontak"
@@ -444,9 +444,9 @@
         },
         "footer": "LEARN BY DOING, GROW BY CREATING"
       },
-      "cooperators": {
-        "title": "Mitra Kerjasama",
-        "description": "Membangun ekosistem pengembangan sumber daya manusia yang komprehensif melalui kolaborasi industri-akademisi-pemerintah.",
+      "projectTeam": {
+        "title": "Tim Proyek",
+        "description": "Anggota tim dengan keahlian yang beragam mewujudkan program pengembangan sumber daya manusia yang komprehensif.",
         "organizations": {
           "starup": {
             "title": "STARUP",
@@ -464,7 +464,7 @@
             "description": "Mendorong perumusan kebijakan dan pengembangan institusi terkait pengembangan sumber daya manusia digital. Mendukung ekosistem pengembangan sumber daya manusia berkelanjutan melalui promosi pertukaran talenta internasional dan pembangunan sistem sertifikasi kualifikasi."
           }
         },
-        "footer": "STRONGER TOGETHER, BRIGHTER FUTURE"
+        "footer": "ONE TEAM, ENDLESS POSSIBILITIES"
       },
       "partners": {
         "title": "Partner", 

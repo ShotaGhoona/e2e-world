@@ -6,27 +6,27 @@ import { SectionFooter } from '@/components/SectionFooter'
 import { SectionHeader } from '@/components/SectionHeader'
 import { useLanguage } from '@/contexts/LanguageContext'
 
-export function Cooperators() {
+export function ProjectTeam() {
   const { t } = useLanguage()
   const partnersData = [
     {
-      title: t('cooperators.organizations.starup.title'),
-      role: t('cooperators.organizations.starup.role'),
-      description: t('cooperators.organizations.starup.description'),
+      title: t('projectTeam.organizations.starup.title'),
+      role: t('projectTeam.organizations.starup.role'),
+      description: t('projectTeam.organizations.starup.description'),
       type: 'innovation' as const,
       logoPlaceholder: '/partner/starup.png'
     },
     {
-      title: t('cooperators.organizations.sakuranesia.title'),
-      role: t('cooperators.organizations.sakuranesia.role'),
-      description: t('cooperators.organizations.sakuranesia.description'),
+      title: t('projectTeam.organizations.sakuranesia.title'),
+      role: t('projectTeam.organizations.sakuranesia.role'),
+      description: t('projectTeam.organizations.sakuranesia.description'),
       type: 'education' as const,
       logoPlaceholder: '/partner/sakuranesia.png'
     },
     {
-      title: t('cooperators.organizations.government.title'),
-      role: t('cooperators.organizations.government.role'),
-      description: t('cooperators.organizations.government.description'),
+      title: t('projectTeam.organizations.government.title'),
+      role: t('projectTeam.organizations.government.role'),
+      description: t('projectTeam.organizations.government.description'),
       type: 'government' as const,
       logoPlaceholder: '/partner/gyousei.png'
     }
@@ -41,9 +41,9 @@ export function Cooperators() {
         {/* Section Header */}
         <SectionHeader 
           index="03"
-          category="COOPERATORS"
-          title={t('cooperators.title')}
-          description={t('cooperators.description')}
+          category="PROJECT TEAM"
+          title={t('projectTeam.title')}
+          description={t('projectTeam.description')}
         />
 
         {/* Partnership Connection Layout */}
@@ -100,7 +100,7 @@ export function Cooperators() {
         </div>
 
         {/* Section Footer */}
-        <SectionFooter message={t('cooperators.footer')} />
+        <SectionFooter message={t('projectTeam.footer')} />
       </div>
     </section>
   )

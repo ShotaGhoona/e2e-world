@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { SectionHeader } from '@/components/SectionHeader'
 import { SectionFooter } from '@/components/SectionFooter'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { FiGlobe, FiUsers, FiStar, FiZap } from 'react-icons/fi'
 
 export function About() {
   const [mounted, setMounted] = useState(false)
@@ -36,22 +37,22 @@ export function About() {
 
   const features = [
     {
-      icon: '🌐',
+      icon: FiGlobe,
       title: t('about.features.culturalBridge.title'),
       description: t('about.features.culturalBridge.description')
     },
     {
-      icon: '💡',
+        icon: FiZap,
       title: t('about.features.ideasExchange.title'),
       description: t('about.features.ideasExchange.description')
     },
     {
-      icon: '🤝',
+      icon: FiUsers,
       title: t('about.features.collaborativeLearning.title'),
       description: t('about.features.collaborativeLearning.description')
     },
     {
-      icon: '🌟',
+      icon: FiStar,
       title: t('about.features.futureCreation.title'),
       description: t('about.features.futureCreation.description')
     }
@@ -129,8 +130,11 @@ export function About() {
                     {/* Content */}
                     <div className="relative z-10">
                       <div className="flex items-start space-x-4 mb-4">
-                        <div className="text-4xl group-hover:scale-110 transition-transform filter drop-shadow-lg">
-                          {feature.icon}
+                        <div className="p-3 bg-[var(--color-accent-primary)]/10 border border-[var(--color-accent-primary)]/20 rounded-lg group-hover:bg-[var(--color-accent-primary)]/20 group-hover:border-[var(--color-accent-primary)]/40 transition-all duration-300">
+                          <feature.icon 
+                            className="text-2xl text-[var(--color-accent-primary)] group-hover:scale-110 transition-transform duration-300" 
+                            strokeWidth={1.5}
+                          />
                         </div>
                         <div className="flex-1">
                           <h3 className="font-mono text-xl font-black text-[var(--color-text-primary)] group-hover:text-[var(--color-accent-primary)] transition-colors mb-2">
