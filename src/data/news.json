@@ -1,0 +1,80 @@
+{
+  "en": [
+    {
+      "date": "2025-08-15",
+      "category": "Program",
+      "title": "Web Development Course 3rd Cohort Recruitment Started",
+      "summary": "Recruitment for the 3rd cohort of our practical web development skills course has begun. Learn the latest technologies focusing on React, Next.js, and TypeScript.",
+      "status": "new",
+      "link": "#"
+    },
+    {
+      "date": "2025-08-10", 
+      "category": "Partnership",
+      "title": "Partnership Agreement with Institut Teknologi Sepuluh Nopember (ITS) Signed",
+      "summary": "Through our official partnership with ITS based in Surabaya, we will strengthen technical education programs for local students.",
+      "status": "important",
+      "link": "#"
+    },
+    {
+      "date": "2025-08-05",
+      "category": "Event",
+      "title": "Online Seminar \"Indonesia × Japan Engineer Exchange\" Held",
+      "summary": "Engineers from both countries presented and discussed global career development perspectives. Real-time Q&A with participants was also conducted.",
+      "status": "completed",
+      "link": "#"
+    }
+  ],
+  "ja": [
+    {
+      "date": "2025-08-15",
+      "category": "プログラム",
+      "title": "Web開発コース第3期生の募集を開始しました",
+      "summary": "実践的なWeb開発スキルを習得できるコースの第3期生募集が開始。React、Next.js、TypeScriptを中心とした最新技術を学習できます。",
+      "status": "new",
+      "link": "#"
+    },
+    {
+      "date": "2025-08-10", 
+      "category": "パートナーシップ",
+      "title": "インドネシア工科大学ITSとの連携協定を締結",
+      "summary": "スラバヤに拠点を置くITSとの正式なパートナーシップにより、現地学生向けの技術教育プログラムを強化します。",
+      "status": "important",
+      "link": "#"
+    },
+    {
+      "date": "2025-08-05",
+      "category": "イベント",
+      "title": "オンライン説明会「インドネシア×日本エンジニア交流セミナー」開催",
+      "summary": "両国のエンジニアが登壇し、グローバルな視点でのキャリア形成について議論。参加者からの質問にもリアルタイムで回答。",
+      "status": "completed",
+      "link": "#"
+    }
+  ],
+  "id": [
+    {
+      "date": "2025-08-15",
+      "category": "Program",
+      "title": "Pendaftaran Angkatan Ke-3 Kursus Pengembangan Web Dimulai",
+      "summary": "Pendaftaran angkatan ke-3 kursus keterampilan pengembangan web praktis telah dimulai. Pelajari teknologi terbaru dengan fokus pada React, Next.js, dan TypeScript.",
+      "status": "new",
+      "link": "#"
+    },
+    {
+      "date": "2025-08-10", 
+      "category": "Kemitraan",
+      "title": "Perjanjian Kemitraan dengan Institut Teknologi Sepuluh Nopember (ITS) Ditandatangani",
+      "summary": "Melalui kemitraan resmi dengan ITS yang berbasis di Surabaya, kami akan memperkuat program pendidikan teknis untuk mahasiswa lokal.",
+      "status": "important",
+      "link": "#"
+    },
+    {
+      "date": "2025-08-05",
+      "category": "Acara",
+      "title": "Seminar Online \"Pertukaran Insinyur Indonesia × Jepang\" Diselenggarakan",
+      "summary": "Insinyur dari kedua negara mempresentasikan dan mendiskusikan perspektif pengembangan karir global. Sesi tanya jawab real-time dengan peserta juga dilakukan.",
+      "status": "completed",
+      "link": "#"
+    }
+  ]
+}

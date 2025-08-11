@@ -1,10 +1,12 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export function Hero() {
   const [mounted, setMounted] = useState(false)
   const [progress, setProgress] = useState(0)
+  const { t } = useLanguage()
 
   useEffect(() => {
     setMounted(true)
@@ -40,24 +42,23 @@ export function Hero() {
           
           {/* Meta Information */}
           <div className="font-mono text-sm text-[var(--color-text-primary)">
-            <span>{'// People and Ideas connecting for a brighter future v2.0.1'}</span>
+            <span>{`// ${t('hero.tagline')}`}</span>
           </div>
 
           {/* Main Title with PAI styling - Consistent Typography */}
           <div className="space-y-6">
             <div className="font-mono text-4xl md:text-8xl font-black leading-none">
               <div className="mb-4">
-                <span className="text-[var(--color-accent-primary)]">PAI</span>
-                <span className="text-[var(--color-text-primary)]">:</span>
+                <span className="text-[var(--color-accent-primary)]">{t('hero.title')}</span>
               </div>
               
               <div className="text-2xl md:text-4xl text-[var(--color-text-primary)] font-normal mb-4">
-                People and Ideas
+                {t('hero.subtitle')}
               </div>
               
               <div className="text-lg md:text-2xl text-[var(--color-text-support)] font-normal">
                 <span className="text-[var(--color-text-meta)]">{'// '}</span>
-                Where people and ideas shape a brighter future.
+                {t('hero.slogan')}
               </div>
             </div>
           </div>
@@ -67,11 +68,11 @@ export function Hero() {
             <div className="font-mono text-lg md:text-xl text-[var(--color-text-support)] space-y-2">
               <div>
                 <span className="text-[var(--color-text-meta)]">{'// '}</span>
-                <span className="text-[var(--color-text-primary)]">多様な人の知恵や文化を結びつけるコミュニティプラットフォーム。</span>
+                <span className="text-[var(--color-text-primary)]">{t('hero.description1')}</span>
               </div>
               <div>
                 <span className="text-[var(--color-text-meta)]">{'// '}</span>
-                <span className="text-[var(--color-text-primary)]">日本とインドネシアの人々とアイデアが出会い、共創する場を提供します。</span>
+                <span className="text-[var(--color-text-primary)]">{t('hero.description2')}</span>
               </div>
             </div>
           </div>
@@ -80,13 +81,13 @@ export function Hero() {
           <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
             <a href="#curriculum">
               <button className="group bg-[var(--color-accent-primary)] text-black px-8 py-4 font-mono font-medium text-lg hover:bg-[var(--color-accent-hover)] transition-all duration-200 border-2 border-[var(--color-accent-primary)] hover:border-[var(--color-accent-hover)] relative overflow-hidden">
-                <span className="relative z-10">MORE_INFO()</span>
+                <span className="relative z-10">{t('hero.buttons.moreInfo')}</span>
                 <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-200" />
               </button>
             </a>
             <a href="#contact">
               <button className="group bg-[var(--color-bg-primary)]/90 backdrop-blur-sm text-[var(--color-text-primary)] px-8 py-4 font-mono font-medium text-lg border-2 border-[var(--color-border-strong)] hover:border-[var(--color-accent-primary)] hover:text-[var(--color-accent-primary)] transition-all duration-200 relative overflow-hidden">
-                <span className="relative z-10">CONNECT_WITH_US()</span>
+                <span className="relative z-10">{t('hero.buttons.connect')}</span>
                 <div className="absolute inset-0 bg-[var(--color-accent-primary)] opacity-0 group-hover:opacity-5 transition-opacity duration-200" />
               </button>
             </a>

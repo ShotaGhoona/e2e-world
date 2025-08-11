@@ -3,8 +3,10 @@
 import React, { useState } from 'react'
 import { SectionHeader } from '@/components/SectionHeader'
 import { SectionFooter } from '@/components/SectionFooter'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export function Contact() {
+  const { t } = useLanguage()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -28,16 +30,16 @@ export function Contact() {
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000))
     setIsSubmitting(false)
-    alert('お問い合わせありがとうございます。担当者より3営業日以内にご連絡いたします。')
+    alert(t('contact.form.submitSuccess'))
   }
 
   const inquiryTypes = [
-    { value: '', label: '--- 選択してください ---' },
-    { value: 'program', label: 'プログラム内容について' },
-    { value: 'partnership', label: 'パートナーシップについて' },
-    { value: 'university', label: '大学連携について' },
-    { value: 'career', label: 'キャリアサポートについて' },
-    { value: 'other', label: 'その他' }
+    { value: '', label: t('contact.form.inquiryTypes.placeholder') },
+    { value: 'program', label: t('contact.form.inquiryTypes.program') },
+    { value: 'partnership', label: t('contact.form.inquiryTypes.partnership') },
+    { value: 'university', label: t('contact.form.inquiryTypes.university') },
+    { value: 'career', label: t('contact.form.inquiryTypes.career') },
+    { value: 'other', label: t('contact.form.inquiryTypes.other') }
   ]
 
 
@@ -59,8 +61,8 @@ export function Contact() {
         <SectionHeader 
           index="06"
           category="CONTACT"
-          title="お問い合わせ"
-          description="プログラムに関するご質問やご相談、お気軽にお問い合わせください。専門スタッフが丁寧にお答えいたします。"
+          title={t('contact.title')}
+          description={t('contact.description')}
         />
 
         {/* Contact Form */}
@@ -69,7 +71,7 @@ export function Contact() {
             {/* Form Header */}
             <div className="mb-8 pb-6 border-b border-[var(--color-border)]">
               <h3 className="font-mono text-xl font-black text-[var(--color-text-primary)] mb-2">
-                お問い合わせフォーム
+                {t('contact.form.title')}
               </h3>
             </div>
 
@@ -80,7 +82,7 @@ export function Contact() {
                 <div className="space-y-2">
                   <label htmlFor="name" className="flex items-center text-sm font-mono text-[var(--color-text-primary)]">
                     <span className="text-[var(--color-accent-primary)] mr-1">*</span>
-                    お名前
+                    {t('contact.form.name')}
                   </label>
                   <input
                     type="text"
@@ -90,7 +92,7 @@ export function Contact() {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 bg-[var(--color-bg-secondary)]/50 border border-[var(--color-border)] focus:border-[var(--color-accent-primary)] focus:outline-none transition-colors font-mono text-[var(--color-text-primary)]"
-                    placeholder="山田太郎"
+                    placeholder={t('contact.form.namePlaceholder')}
                   />
                 </div>
 
@@ -98,7 +100,7 @@ export function Contact() {
                 <div className="space-y-2">
                   <label htmlFor="email" className="flex items-center text-sm font-mono text-[var(--color-text-primary)]">
                     <span className="text-[var(--color-accent-primary)] mr-1">*</span>
-                    メールアドレス
+                    {t('contact.form.email')}
                   </label>
                   <input
                     type="email"
@@ -108,7 +110,7 @@ export function Contact() {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 bg-[var(--color-bg-secondary)]/50 border border-[var(--color-border)] focus:border-[var(--color-accent-primary)] focus:outline-none transition-colors font-mono text-[var(--color-text-primary)]"
-                    placeholder="example@email.com"
+                    placeholder={t('contact.form.emailPlaceholder')}
                   />
                 </div>
               </div>
@@ -118,7 +120,7 @@ export function Contact() {
                 {/* Organization Field */}
                 <div className="space-y-2">
                   <label htmlFor="organization" className="flex items-center text-sm font-mono text-[var(--color-text-primary)]">
-                    ご所属（任意）
+                    {t('contact.form.organization')}
                   </label>
                   <input
                     type="text"
@@ -127,7 +129,7 @@ export function Contact() {
                     value={formData.organization}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 bg-[var(--color-bg-secondary)]/50 border border-[var(--color-border)] focus:border-[var(--color-accent-primary)] focus:outline-none transition-colors font-mono text-[var(--color-text-primary)]"
-                    placeholder="株式会社○○ / ○○大学 など"
+                    placeholder={t('contact.form.organizationPlaceholder')}
                   />
                 </div>
 
@@ -135,7 +137,7 @@ export function Contact() {
                 <div className="space-y-2">
                   <label htmlFor="inquiryType" className="flex items-center text-sm font-mono text-[var(--color-text-primary)]">
                     <span className="text-[var(--color-accent-primary)] mr-1">*</span>
-                    お問い合わせ内容
+                    {t('contact.form.inquiryType')}
                   </label>
                   <select
                     id="inquiryType"
@@ -158,7 +160,7 @@ export function Contact() {
               <div className="space-y-2">
                 <label htmlFor="message" className="flex items-center text-sm font-mono text-[var(--color-text-primary)]">
                   <span className="text-[var(--color-accent-primary)] mr-1">*</span>
-                  詳細メッセージ
+                  {t('contact.form.message')}
                 </label>
                 <textarea
                   id="message"
@@ -168,7 +170,7 @@ export function Contact() {
                   required
                   rows={6}
                   className="w-full px-4 py-3 bg-[var(--color-bg-secondary)]/50 border border-[var(--color-border)] focus:border-[var(--color-accent-primary)] focus:outline-none transition-colors font-mono text-[var(--color-text-primary)] resize-vertical"
-                  placeholder="お問い合わせの詳細をご記入ください..."
+                  placeholder={t('contact.form.messagePlaceholder')}
                 />
               </div>
 
@@ -180,7 +182,7 @@ export function Contact() {
                   className="w-full md:w-auto bg-[var(--color-accent-primary)] text-black px-8 py-4 font-mono font-medium hover:bg-[var(--color-accent-hover)] transition-all duration-200 border-2 border-[var(--color-accent-primary)] hover:border-[var(--color-accent-hover)] relative group disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <span className="relative z-10">
-                    {isSubmitting ? 'SENDING...' : 'SEND_MESSAGE()'}
+                    {isSubmitting ? t('contact.form.sending') : t('contact.form.submit')}
                   </span>
                   <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-200" />
                 </button>
@@ -191,7 +193,7 @@ export function Contact() {
         </div>
 
         {/* Section Footer */}
-        <SectionFooter message="WE'RE HERE TO HELP YOU SUCCEED" />
+        <SectionFooter message={t('contact.footer')} />
       </div>
     </section>
   )

@@ -66,7 +66,7 @@
         "courses": {
           "webDevelopment": {
             "title": "Web & E-commerce Development",
-            "description": "Learn modern website and e-commerce construction techniques. Covers from frontend to backend comprehensively."
+            "description": "Learn modern website and e-commerce development techniques. Covers from frontend to backend comprehensively."
           },
           "systemDevelopment": {
             "title": "System Development", 
@@ -120,7 +120,7 @@
       },
       "partners": {
         "title": "Partners", 
-        "description": "Partnering with major universities in Indonesia to develop practical engineer training programs.",
+        "description": "Partnering with major universities in Indonesia to develop practical engineering training programs.",
         "universities": {
           "stikomBali": "STIKOM Bali",
           "uinJakarta": "UIN Jakarta",
@@ -247,37 +247,15 @@
       },
       "curriculum": {
         "title": "学べること",
-        "description": "実践的なスキルセットで次世代のデジタル人材に。現場で求められる技術を体系的に学習できます。",
-        "courses": {
-          "webDevelopment": {
-            "title": "Web制作・ECサイト制作",
-            "description": "モダンなウェブサイトとECサイトの構築技術を学習。フロントエンドからバックエンドまで幅広くカバーします。"
-          },
-          "systemDevelopment": {
-            "title": "システム開発", 
-            "description": "エンタープライズレベルのシステム構築技術。スケーラブルなアーキテクチャ設計を習得できます。"
-          },
-          "mobileApp": {
-            "title": "モバイルアプリ開発",
-            "description": "iOS・Android対応のクロスプラットフォーム開発。ネイティブアプリの開発手法も学習します。"
-          },
-          "serverInfra": {
-            "title": "サーバー構築",
-            "description": "クラウドインフラとDevOps実践。現代的なサーバー運用とデプロイメント手法を習得。"
-          },
-          "aiMachineLearning": {
-            "title": "AI・機械学習",
-            "description": "人工知能とデータサイエンスの実装。最新のAI技術を活用したアプリケーション開発。"
-          },
-          "blockchain": {
-            "title": "ブロックチェーン開発",
-            "description": "Web3・DApp・スマートコントラクト開発。分散型アプリケーションの構築技術。"
-          }
-        },
+        "description": "実践的なスキルセットで次世代のデジタル人材を育成。現場で求められる技術を体系的に学習できます。",
         "levels": {
           "beginner": "初級",
           "intermediate": "中級", 
           "advanced": "上級"
+        },
+        "technologies": "学習技術",
+        "learningContent": {
+          "title": "学習内容"
         },
         "footer": "LEARN BY DOING, GROW BY CREATING"
       },
@@ -378,7 +356,7 @@
         "about": "Tentang PAI",
         "curriculum": "Yang Dipelajari",
         "cooperators": "Mitra Kerjasama",
-        "partners": "Partner", 
+        "partners": "Partners", 
         "news": "Berita",
         "contact": "Kontak"
       },
@@ -418,7 +396,7 @@
         },
         "stats": {
           "countries": "Negara",
-          "partners": "Partner", 
+          "partners": "Partners", 
           "members": "Anggota",
           "ideas": "Ide"
         },
@@ -432,11 +410,11 @@
       },
       "curriculum": {
         "title": "Yang Dipelajari",
-        "description": "Set keterampilan praktis untuk talenta digital generasi selanjutnya. Pelajari teknologi yang dibutuhkan di industri secara sistematis.",
+        "description": "Keterampilan praktis untuk talenta digital generasi mendatang. Pelajari teknologi yang dibutuhkan di industri secara sistematis.",
         "courses": {
           "webDevelopment": {
             "title": "Pengembangan Web & E-commerce",
-            "description": "Pelajari teknik konstruksi website modern dan situs e-commerce. Mencakup dari frontend hingga backend secara komprehensif."
+            "description": "Pelajari teknik pengembangan website modern dan situs e-commerce. Mencakup dari frontend hingga backend secara komprehensif."
           },
           "systemDevelopment": {
             "title": "Pengembangan Sistem", 

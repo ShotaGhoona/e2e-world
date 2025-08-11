@@ -1,17 +1,19 @@
 'use client'
 import React, { useState } from 'react'
 import { ThemeToggle } from './ThemeToggle'
-
-const navigationItems = [
-  { label: 'PAIとは', href: '#about', index: '01' },
-  { label: '学べること', href: '#curriculum', index: '02' },
-  { label: '協力団体', href: '#partners', index: '03' },
-  { label: 'パートナー', href: '#universities', index: '04' },
-  { label: 'お知らせ', href: '#news', index: '05' },
-]
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { t } = useLanguage()
+
+  const navigationItems = [
+    { label: t('navigation.about'), href: '#about', index: '01' },
+    { label: t('navigation.curriculum'), href: '#curriculum', index: '02' },
+    { label: t('navigation.cooperators'), href: '#partners', index: '03' },
+    { label: t('navigation.partners'), href: '#universities', index: '04' },
+    { label: t('navigation.news'), href: '#news', index: '05' },
+  ]
 
   return (
     <>
@@ -61,7 +63,7 @@ export function Header() {
 
             <a href="#contact">
               <button className="bg-[var(--color-accent-primary)] text-black px-6 py-3 text-sm font-mono font-medium hover:bg-[var(--color-accent-hover)] transition-all duration-200 border-2 border-[var(--color-accent-primary)] hover:border-[var(--color-accent-hover)] relative group">
-                <span className="relative z-10">お問い合わせ</span>
+                <span className="relative z-10">{t('navigation.contact')}</span>
                 <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-200" />
               </button>
             </a>
@@ -169,7 +171,7 @@ export function Header() {
               {/* Contact Button */}
               <a href="#contact" onClick={() => setIsMenuOpen(false)}>
                 <button className="w-full bg-[var(--color-accent-primary)] text-black py-3 px-6 font-mono font-medium hover:bg-[var(--color-accent-hover)] transition-all duration-200 border-2 border-[var(--color-accent-primary)] hover:border-[var(--color-accent-hover)] relative group">
-                  <span className="relative z-10">お問い合わせ</span>
+                  <span className="relative z-10">{t('navigation.contact')}</span>
                   <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-200" />
                 </button>
               </a>

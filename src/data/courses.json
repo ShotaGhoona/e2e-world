@@ -1,0 +1,242 @@
+{
+  "en": [
+    {
+      "title": "Web Development & E-commerce Sites",
+      "description": "Learn modern website and e-commerce site construction techniques. Covers a wide range from frontend to backend development.",
+      "technologies": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Stripe", "Supabase"],
+      "level": "beginner",
+      "duration": "3-4 months",
+      "learningContent": [
+        "Project-based practical learning with real e-commerce sites",
+        "Mentoring by active frontend and backend engineers",
+        "Portfolio creation and career support for web developers",
+        "Industry-standard tools and modern web development workflows"
+      ]
+    },
+    {
+      "title": "System Development",
+      "description": "Enterprise-level system construction technology. Master scalable architecture design skills.",
+      "technologies": ["Node.js", "Python", "PostgreSQL", "Docker", "GraphQL", "Microservices"],
+      "level": "intermediate",
+      "duration": "4-6 months",
+      "learningContent": [
+        "Enterprise system architecture and design patterns",
+        "Mentoring by senior system architects and backend specialists",
+        "Large-scale application portfolio and system design documentation",
+        "Enterprise-grade development tools and DevOps practices"
+      ]
+    },
+    {
+      "title": "Mobile App Development",
+      "description": "Cross-platform development for iOS and Android. Also learn native app development methods.",
+      "technologies": ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Native APIs"],
+      "level": "intermediate",
+      "duration": "4-5 months",
+      "learningContent": [
+        "Cross-platform and native mobile app development projects",
+        "Mentoring by experienced mobile developers and app store specialists",
+        "Mobile app portfolio with published apps on App Store and Google Play",
+        "Mobile development tools, testing frameworks, and deployment pipelines"
+      ]
+    },
+    {
+      "title": "Server Infrastructure",
+      "description": "Cloud infrastructure and DevOps practice. Master modern server operations and deployment methods.",
+      "technologies": ["AWS", "Google Cloud", "Kubernetes", "Terraform", "CI/CD", "Monitoring"],
+      "level": "advanced",
+      "duration": "5-6 months",
+      "learningContent": [
+        "Hands-on cloud infrastructure projects with real-world scalability challenges",
+        "Mentoring by DevOps engineers and cloud architects",
+        "Infrastructure-as-Code portfolio and system reliability documentation",
+        "Enterprise cloud platforms, monitoring tools, and automation frameworks"
+      ]
+    },
+    {
+      "title": "AI & Machine Learning",
+      "description": "Implementation of artificial intelligence and data science. Develop applications using the latest AI technologies.",
+      "technologies": ["Python", "TensorFlow", "PyTorch", "Jupyter", "Pandas", "OpenAI API"],
+      "level": "advanced",
+      "duration": "6-8 months",
+      "learningContent": [
+        "Real-world AI/ML projects with datasets and model deployment",
+        "Mentoring by data scientists and machine learning engineers",
+        "AI application portfolio with deployed models and research papers",
+        "Industry-standard ML platforms, experiment tracking, and model versioning tools"
+      ]
+    },
+    {
+      "title": "Blockchain Development",
+      "description": "Web3, DApp, and smart contract development. Master decentralized application construction techniques.",
+      "technologies": ["Solidity", "Ethereum", "Web3.js", "Hardhat", "IPFS", "MetaMask"],
+      "level": "advanced",
+      "duration": "4-6 months",
+      "learningContent": [
+        "End-to-end DApp development with smart contract deployment",
+        "Mentoring by blockchain developers and Web3 security experts",
+        "Blockchain portfolio with deployed smart contracts and DApps",
+        "Web3 development tools, testing frameworks, and security audit practices"
+      ]
+    }
+  ],
+  "ja": [
+    {
+      "title": "Web制作・ECサイト制作",
+      "description": "モダンなウェブサイトとECサイトの構築技術を学習。フロントエンドからバックエンドまで幅広くカバーします。",
+      "technologies": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Stripe", "Supabase"],
+      "level": "beginner",
+      "duration": "3-4ヶ月",
+      "learningContent": [
+        "実際のECサイトを使った実践的なプロジェクトベース学習",
+        "現役フロントエンド・バックエンドエンジニアによるメンタリング",
+        "Web開発者向けポートフォリオ制作とキャリアサポート",
+        "業界標準のツールとモダンWeb開発ワークフロー"
+      ]
+    },
+    {
+      "title": "システム開発",
+      "description": "エンタープライズレベルのシステム構築技術。スケーラブルなアーキテクチャ設計を習得できます。",
+      "technologies": ["Node.js", "Python", "PostgreSQL", "Docker", "GraphQL", "Microservices"],
+      "level": "intermediate",
+      "duration": "4-6ヶ月",
+      "learningContent": [
+        "エンタープライズシステムアーキテクチャと設計パターン実習",
+        "シニアシステムアーキテクト・バックエンド専門家によるメンタリング",
+        "大規模アプリケーションポートフォリオとシステム設計ドキュメント作成",
+        "エンタープライズ級開発ツールとDevOpsプラクティス"
+      ]
+    },
+    {
+      "title": "モバイルアプリ開発",
+      "description": "iOS・Android対応のクロスプラットフォーム開発。ネイティブアプリの開発手法も学習します。",
+      "technologies": ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Native APIs"],
+      "level": "intermediate",
+      "duration": "4-5ヶ月",
+      "learningContent": [
+        "クロスプラットフォーム・ネイティブモバイルアプリ開発プロジェクト",
+        "経験豊富なモバイル開発者・アプリストア専門家によるメンタリング",
+        "App Store・Google Playに公開済みアプリを含むモバイルアプリポートフォリオ",
+        "モバイル開発ツール、テストフレームワーク、デプロイメントパイプライン"
+      ]
+    },
+    {
+      "title": "サーバー構築",
+      "description": "クラウドインフラとDevOps実践。現代的なサーバー運用とデプロイメント手法を習得。",
+      "technologies": ["AWS", "Google Cloud", "Kubernetes", "Terraform", "CI/CD", "Monitoring"],
+      "level": "advanced",
+      "duration": "5-6ヶ月",
+      "learningContent": [
+        "実世界のスケーラビリティ課題を伴うハンズオンクラウドインフラプロジェクト",
+        "DevOpsエンジニア・クラウドアーキテクトによるメンタリング",
+        "Infrastructure-as-Codeポートフォリオとシステム信頼性ドキュメント",
+        "エンタープライズクラウドプラットフォーム、監視ツール、自動化フレームワーク"
+      ]
+    },
+    {
+      "title": "AI・機械学習",
+      "description": "人工知能とデータサイエンスの実装。最新のAI技術を活用したアプリケーション開発。",
+      "technologies": ["Python", "TensorFlow", "PyTorch", "Jupyter", "Pandas", "OpenAI API"],
+      "level": "advanced",
+      "duration": "6-8ヶ月",
+      "learningContent": [
+        "データセットとモデルデプロイメントを含む実世界のAI/MLプロジェクト",
+        "データサイエンティスト・機械学習エンジニアによるメンタリング",
+        "デプロイ済みモデルと研究論文を含むAIアプリケーションポートフォリオ",
+        "業界標準MLプラットフォーム、実験トラッキング、モデルバージョニングツール"
+      ]
+    },
+    {
+      "title": "ブロックチェーン開発",
+      "description": "Web3・DApp・スマートコントラクト開発。分散型アプリケーションの構築技術。",
+      "technologies": ["Solidity", "Ethereum", "Web3.js", "Hardhat", "IPFS", "MetaMask"],
+      "level": "advanced",
+      "duration": "4-6ヶ月",
+      "learningContent": [
+        "スマートコントラクトデプロイメントを含むエンドツーエンドDApp開発",
+        "ブロックチェーン開発者・Web3セキュリティ専門家によるメンタリング",
+        "デプロイ済みスマートコントラクトとDAppを含むブロックチェーンポートフォリオ",
+        "Web3開発ツール、テストフレームワーク、セキュリティ監査プラクティス"
+      ]
+    }
+  ],
+  "id": [
+    {
+      "title": "Pengembangan Web & Situs E-commerce",
+      "description": "Pelajari teknik konstruksi website modern dan situs e-commerce. Mencakup berbagai hal dari pengembangan frontend hingga backend.",
+      "technologies": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Stripe", "Supabase"],
+      "level": "beginner",
+      "duration": "3-4 bulan",
+      "learningContent": [
+        "Pembelajaran berbasis proyek praktis dengan situs e-commerce nyata",
+        "Mentoring oleh insinyur frontend dan backend yang aktif",
+        "Pembuatan portofolio dan dukungan karir untuk pengembang web",
+        "Tool standar industri dan workflow pengembangan web modern"
+      ]
+    },
+    {
+      "title": "Pengembangan Sistem",
+      "description": "Teknologi konstruksi sistem tingkat enterprise. Kuasai keterampilan desain arsitektur yang dapat diskalakan.",
+      "technologies": ["Node.js", "Python", "PostgreSQL", "Docker", "GraphQL", "Microservices"],
+      "level": "intermediate",
+      "duration": "4-6 bulan",
+      "learningContent": [
+        "Arsitektur sistem enterprise dan pola desain",
+        "Mentoring oleh arsitek sistem senior dan spesialis backend",
+        "Portofolio aplikasi skala besar dan dokumentasi desain sistem",
+        "Tool pengembangan tingkat enterprise dan praktik DevOps"
+      ]
+    },
+    {
+      "title": "Pengembangan Aplikasi Mobile",
+      "description": "Pengembangan lintas platform untuk iOS dan Android. Pelajari juga metode pengembangan aplikasi native.",
+      "technologies": ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Native APIs"],
+      "level": "intermediate",
+      "duration": "4-5 bulan",
+      "learningContent": [
+        "Proyek pengembangan aplikasi mobile lintas platform dan native",
+        "Mentoring oleh pengembang mobile berpengalaman dan spesialis app store",
+        "Portofolio aplikasi mobile dengan aplikasi yang dipublikasi di App Store dan Google Play",
+        "Tool pengembangan mobile, framework testing, dan pipeline deployment"
+      ]
+    },
+    {
+      "title": "Infrastruktur Server",
+      "description": "Infrastruktur cloud dan praktik DevOps. Kuasai operasi server modern dan metode deployment.",
+      "technologies": ["AWS", "Google Cloud", "Kubernetes", "Terraform", "CI/CD", "Monitoring"],
+      "level": "advanced",
+      "duration": "5-6 bulan",
+      "learningContent": [
+        "Proyek infrastruktur cloud hands-on dengan tantangan skalabilitas dunia nyata",
+        "Mentoring oleh insinyur DevOps dan arsitek cloud",
+        "Portofolio Infrastructure-as-Code dan dokumentasi keandalan sistem",
+        "Platform cloud enterprise, tool monitoring, dan framework otomatisasi"
+      ]
+    },
+    {
+      "title": "AI & Machine Learning",
+      "description": "Implementasi kecerdasan buatan dan data science. Kembangkan aplikasi menggunakan teknologi AI terbaru.",
+      "technologies": ["Python", "TensorFlow", "PyTorch", "Jupyter", "Pandas", "OpenAI API"],
+      "level": "advanced",
+      "duration": "6-8 bulan",
+      "learningContent": [
+        "Proyek AI/ML dunia nyata dengan dataset dan deployment model",
+        "Mentoring oleh data scientist dan machine learning engineer",
+        "Portofolio aplikasi AI dengan model yang di-deploy dan paper penelitian",
+        "Platform ML standar industri, experiment tracking, dan tool versioning model"
+      ]
+    },
+    {
+      "title": "Pengembangan Blockchain",
+      "description": "Pengembangan Web3, DApp, dan smart contract. Kuasai teknik konstruksi aplikasi terdesentralisasi.",
+      "technologies": ["Solidity", "Ethereum", "Web3.js", "Hardhat", "IPFS", "MetaMask"],
+      "level": "advanced",
+      "duration": "4-6 bulan",
+      "learningContent": [
+        "Pengembangan DApp end-to-end dengan deployment smart contract",
+        "Mentoring oleh pengembang blockchain dan ahli keamanan Web3",
+        "Portofolio blockchain dengan smart contract dan DApp yang di-deploy",
+        "Tool pengembangan Web3, framework testing, dan praktik audit keamanan"
+      ]
+    }
+  ]
+}

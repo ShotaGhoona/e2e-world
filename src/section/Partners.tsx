@@ -3,59 +3,12 @@
 import React from 'react'
 import { SectionFooter } from '@/components/SectionFooter'
 import { SectionHeader } from '@/components/SectionHeader'
+import { useLanguage } from '@/contexts/LanguageContext'
+import universitiesData from '@/data/universities.json'
 
 export function Partners() {
-  const universitiesData = [
-    {
-      name: 'STIKOM Bali',
-      nameEn: 'STIKOM Bali',
-      location: 'バリ, インドネシア',
-      logo: '/uni/stikom-bali.webp',
-      specialty: 'コンピューター・情報技術'
-    },
-    {
-      name: 'UIN Jakarta',
-      nameEn: 'Universitas Islam Negeri Syarif Hidayatullah Jakarta',
-      location: 'ジャカルタ, インドネシア', 
-      logo: '/uni/uin-jakarta.jpg',
-      specialty: 'イスラム総合大学'
-    },
-    {
-      name: 'UPI',
-      nameEn: 'Universitas Pendidikan Indonesia',
-      location: 'バンドン, インドネシア',
-      logo: '/uni/upi.png',
-      specialty: '教育・工学'
-    },
-    {
-      name: 'UNLA Bandung',
-      nameEn: 'Universitas Langlangbuana Bandung',
-      location: 'バンドン, インドネシア',
-      logo: '/uni/unla-bandung.png',
-      specialty: '総合大学'
-    },
-    {
-      name: 'UI FMIPA',
-      nameEn: 'Universitas Indonesia - FMIPA',
-      location: 'ジャカルタ, インドネシア',
-      logo: '/uni/ui-fmipa.png',
-      specialty: '数学・自然科学'
-    },
-    {
-      name: 'ITS',
-      nameEn: 'Institut Teknologi Sepuluh Nopember',
-      location: 'スラバヤ, インドネシア',
-      logo: '/uni/its.png',
-      specialty: '工学・技術'
-    },
-    {
-      name: 'UNEJ',
-      nameEn: 'Universitas Jember',
-      location: 'ジャンベル, インドネシア',
-      logo: '/uni/unej.webp',
-      specialty: '総合大学'
-    }
-  ]
+  const { t, language } = useLanguage()
+  const currentUniversitiesData = universitiesData[language] || universitiesData.en
 
   return (
     <section id="universities" className="py-24 bg-[var(--color-bg-primary)] relative">
@@ -76,8 +29,8 @@ export function Partners() {
           <SectionHeader 
             index="04"
             category="PARTNERS"
-            title="パートナー"
-            description="インドネシアの主要大学と連携し、実践的なエンジニア育成プログラムを展開しています。"
+            title={t('partners.title')}
+            description={t('partners.description')}
           />
         </div>
 
@@ -85,7 +38,7 @@ export function Partners() {
         <div className="mb-16 overflow-hidden">
           <div className="animate-scroll-x flex space-x-6">
             {/* First set */}
-            {universitiesData.map((university, index) => (
+            {currentUniversitiesData.map((university, index) => (
               <div 
                 key={`first-${index}`}
                 className="group bg-[var(--color-bg-primary)] border border-[var(--color-border)] hover:border-[var(--color-accent-primary)] transition-all duration-300 hover:bg-[var(--color-bg-secondary)]/30 relative overflow-hidden flex-shrink-0 w-80"
@@ -128,7 +81,7 @@ export function Partners() {
             ))}
             
             {/* Second set for infinite loop */}
-            {universitiesData.map((university, index) => (
+            {currentUniversitiesData.map((university, index) => (
               <div 
                 key={`second-${index}`}
                 className="group bg-[var(--color-bg-primary)] border border-[var(--color-border)] hover:border-[var(--color-accent-primary)] transition-all duration-300 hover:bg-[var(--color-bg-secondary)]/30 relative overflow-hidden flex-shrink-0 w-80"
@@ -173,7 +126,7 @@ export function Partners() {
         </div>
 
         {/* Section Footer */}
-        <SectionFooter message="CONNECTING KNOWLEDGE ACROSS BORDERS" />
+        <SectionFooter message={t('partners.footer')} />
       </div>
     </section>
   )

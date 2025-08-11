@@ -4,27 +4,29 @@ import React from 'react'
 import { ParticleBackground } from '@/components/ParticleBackground'
 import { SectionFooter } from '@/components/SectionFooter'
 import { SectionHeader } from '@/components/SectionHeader'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export function Cooperators() {
+  const { t } = useLanguage()
   const partnersData = [
     {
-      title: 'STARUP',
-      role: '技術革新パートナー',
-      description: '最新技術の研究開発と実践的なカリキュラム設計を担当。業界のトレンドを反映した実用的なプログラムを提供し、学習者が現場で即戦力となれるよう支援します。',
+      title: t('cooperators.organizations.starup.title'),
+      role: t('cooperators.organizations.starup.role'),
+      description: t('cooperators.organizations.starup.description'),
       type: 'innovation' as const,
       logoPlaceholder: '/partner/starup.png'
     },
     {
-      title: 'サクラネシア財団',
-      role: '教育支援パートナー',
-      description: '教育資金の提供と学習環境の整備を通じて、質の高い教育機会を創出。奨学金制度や施設提供により、多くの学習者がプログラムに参加できる基盤を構築します。',
+      title: t('cooperators.organizations.sakuranesia.title'),
+      role: t('cooperators.organizations.sakuranesia.role'),
+      description: t('cooperators.organizations.sakuranesia.description'),
       type: 'education' as const,
       logoPlaceholder: '/partner/sakuranesia.png'
     },
     {
-      title: '行政機関',
-      role: '政策支援パートナー',
-      description: 'デジタル人材育成に関する政策立案と制度整備を推進。国際的な人材交流促進や資格認定制度の構築により、持続可能な人材育成エコシステムを支援します。',
+      title: t('cooperators.organizations.government.title'),
+      role: t('cooperators.organizations.government.role'),
+      description: t('cooperators.organizations.government.description'),
       type: 'government' as const,
       logoPlaceholder: '/partner/gyousei.png'
     }
@@ -40,8 +42,8 @@ export function Cooperators() {
         <SectionHeader 
           index="03"
           category="COOPERATORS"
-          title="協力団体"
-          description="産学官連携により、包括的な人材育成エコシステムを構築しています。"
+          title={t('cooperators.title')}
+          description={t('cooperators.description')}
         />
 
         {/* Partnership Connection Layout */}
@@ -98,7 +100,7 @@ export function Cooperators() {
         </div>
 
         {/* Section Footer */}
-        <SectionFooter message="STRONGER TOGETHER, BRIGHTER FUTURE" />
+        <SectionFooter message={t('cooperators.footer')} />
       </div>
     </section>
   )

@@ -3,34 +3,12 @@
 import React from 'react'
 import { SectionFooter } from '@/components/SectionFooter'
 import { SectionHeader } from '@/components/SectionHeader'
+import { useLanguage } from '@/contexts/LanguageContext'
+import newsData from '@/data/news.json'
 
 export function News() {
-  const newsData = [
-    {
-      date: '2025-08-15',
-      category: 'プログラム',
-      title: 'Web開発コース第3期生の募集を開始しました',
-      summary: '実践的なWeb開発スキルを習得できるコースの第3期生募集が開始。React、Next.js、TypeScriptを中心とした最新技術を学習できます。',
-      status: 'new',
-      link: '#'
-    },
-    {
-      date: '2025-08-10', 
-      category: 'パートナーシップ',
-      title: 'インドネシア工科大学ITSとの連携協定を締結',
-      summary: 'スラバヤに拠点を置くITSとの正式なパートナーシップにより、現地学生向けの技術教育プログラムを強化します。',
-      status: 'important',
-      link: '#'
-    },
-    {
-      date: '2025-08-05',
-      category: 'イベント',
-      title: 'オンライン説明会「インドネシア×日本エンジニア交流セミナー」開催',
-      summary: '両国のエンジニアが登壇し、グローバルな視点でのキャリア形成について議論。参加者からの質問にもリアルタイムで回答。',
-      status: 'completed',
-      link: '#'
-    }
-  ]
+  const { t, language } = useLanguage()
+  const currentNewsData = newsData[language] || newsData.en
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -48,13 +26,13 @@ export function News() {
   const getStatusLabel = (status: string) => {
     switch (status) {
       case 'new':
-        return 'NEW'
+        return t('news.status.new')
       case 'important':
-        return 'IMPORTANT'
+        return t('news.status.important')
       case 'completed':
-        return 'COMPLETED'
+        return t('news.status.completed')
       default:
-        return 'UPDATE'
+        return t('news.status.update')
     }
   }
 
@@ -76,8 +54,8 @@ export function News() {
         <SectionHeader 
           index="05"
           category="NEWS"
-          title="お知らせ"
-          description="最新のプログラム情報、パートナーシップ、イベント情報をお届けします。"
+          title={t('news.title')}
+          description={t('news.description')}
         />
 
         {/* News Timeline */}
@@ -86,7 +64,7 @@ export function News() {
           <div className="absolute left-8 top-0 bottom-0 w-px bg-[var(--color-border)] hidden md:block" />
           
           <div className="space-y-8">
-            {newsData.map((news, index) => (
+            {currentNewsData.map((news, index) => (
               <div key={index} className="relative group">
                 {/* Timeline Dot */}
                 <div className="absolute left-6 w-4 h-4 bg-[var(--color-accent-primary)] border-4 border-[var(--color-bg-primary)] rounded-full hidden md:block group-hover:bg-[var(--color-accent-hover)] transition-colors" />
@@ -99,7 +77,8 @@ export function News() {
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center space-x-4">
                         <div className="font-mono text-sm text-[var(--color-text-meta)]">
-                          {new Date(news.date).toLocaleDateString('ja-JP', {
+                          {new Date(news.date).toLocaleDateString(
+                            language === 'ja' ? 'ja-JP' : language === 'id' ? 'id-ID' : 'en-US', {
                             year: 'numeric',
                             month: '2-digit',
                             day: '2-digit'
@@ -129,7 +108,7 @@ export function News() {
                     
                     <div className="flex items-center justify-between">
                       <button className="font-mono text-sm text-[var(--color-accent-primary)] hover:text-[var(--color-accent-hover)] transition-colors flex items-center space-x-2 group">
-                        <span>詳細を見る</span>
+                        <span>{t('news.readMore')}</span>
                         <span className="group-hover:translate-x-1 transition-transform">→</span>
                       </button>
                       
@@ -150,13 +129,13 @@ export function News() {
         {/* More News Button */}
         <div className="text-center mt-16">
           <button className="bg-transparent border-2 border-[var(--color-border)] text-[var(--color-text-primary)] hover:border-[var(--color-accent-primary)] hover:bg-[var(--color-accent-primary)] hover:text-black px-8 py-4 font-mono font-medium transition-all duration-300 relative group overflow-hidden">
-            <span className="relative z-10">もっと見る</span>
+            <span className="relative z-10">{t('news.seeMore')}</span>
             <div className="absolute inset-0 bg-[var(--color-accent-primary)] translate-x-full group-hover:translate-x-0 transition-transform duration-300" />
           </button>
         </div>
 
         {/* Section Footer */}
-        <SectionFooter message="STAY UPDATED WITH E2E" />
+        <SectionFooter message={t('news.footer')} />
       </div>
     </section>
   )

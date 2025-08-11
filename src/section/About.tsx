@@ -3,10 +3,12 @@
 import React, { useState, useEffect } from 'react'
 import { SectionHeader } from '@/components/SectionHeader'
 import { SectionFooter } from '@/components/SectionFooter'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export function About() {
   const [mounted, setMounted] = useState(false)
   const [visibleStats, setVisibleStats] = useState<number[]>([])
+  const { t } = useLanguage()
 
   useEffect(() => {
     setMounted(true)
@@ -26,36 +28,32 @@ export function About() {
   }, [])
 
   const stats = [
-    { value: '2', label: '国', suffix: 'Countries', color: 'text-[var(--color-accent-primary)]' },
-    { value: '7+', label: 'パートナー', suffix: 'Partners', color: 'text-[var(--color-terminal)]' },
-    { value: '1000+', label: 'メンバー', suffix: 'Members', color: 'text-blue-500' },
-    { value: '∞', label: 'アイデア', suffix: 'Ideas', color: 'text-[var(--color-accent-primary)]' }
+    { value: '2', label: t('about.stats.countries'), suffix: 'Countries', color: 'text-[var(--color-accent-primary)]' },
+    { value: '7+', label: t('about.stats.partners'), suffix: 'Partners', color: 'text-[var(--color-terminal)]' },
+    { value: '1000+', label: t('about.stats.members'), suffix: 'Members', color: 'text-blue-500' },
+    { value: '∞', label: t('about.stats.ideas'), suffix: 'Ideas', color: 'text-[var(--color-accent-primary)]' }
   ]
 
   const features = [
     {
       icon: '🌐',
-      title: 'Cultural Bridge',
-      subtitle: '文化の架け橋',
-      description: '日本とインドネシアの多様な文化と価値観を尊重し、異なる背景を持つ人々が相互理解を深めながら共創できる環境を提供します。'
+      title: t('about.features.culturalBridge.title'),
+      description: t('about.features.culturalBridge.description')
     },
     {
       icon: '💡',
-      title: 'Ideas Exchange',
-      subtitle: 'アイデア交流',
-      description: '革新的なアイデアと創造的な発想を自由に共有できるプラットフォームで、個人の可能性と集合知の力を最大限に活用します。'
+      title: t('about.features.ideasExchange.title'),
+      description: t('about.features.ideasExchange.description')
     },
     {
       icon: '🤝',
-      title: 'Collaborative Learning',
-      subtitle: '協働学習',
-      description: '共に学び、共に成長する学習コミュニティで、参加者同士が互いに教え合い、支え合いながらスキルを向上させます。'
+      title: t('about.features.collaborativeLearning.title'),
+      description: t('about.features.collaborativeLearning.description')
     },
     {
       icon: '🌟',
-      title: 'Future Creation',
-      subtitle: '未来創造',
-      description: '人とアイデアの力を結集し、両国そして世界のより良い未来を共に創造する持続可能なコミュニティを構築します。'
+      title: t('about.features.futureCreation.title'),
+      description: t('about.features.futureCreation.description')
     }
   ]
 
@@ -88,8 +86,8 @@ export function About() {
         <SectionHeader 
           index="01"
           category="ABOUT"
-          title="PAI: People and Ideasとは"
-          description="多様な人の知恵や文化を結びつけるコミュニティプラットフォーム。日本とインドネシアの人々とアイデアが出会い、共創し、より明るい未来を形作る場を提供します。"
+          title={t('about.title')}
+          description={t('about.description')}
         />
         {/* Mission Statement */}
         <div className="mb-20">
@@ -105,10 +103,7 @@ export function About() {
                 {'// MISSION STATEMENT'}
               </div>
               <blockquote className="text-xl md:text-2xl text-[var(--color-text-primary)] leading-relaxed font-light">
-                &ldquo;多様な文化と知恵を持つ人々が出会い、
-                <br />
-                <span className="text-[var(--color-accent-primary)] font-medium">アイデアを共有し、共に学び、共に創る</span>
-                コミュニティを築く。&rdquo;
+                &ldquo;{t('about.mission')}&rdquo;
               </blockquote>
             </div>
           </div>
@@ -141,9 +136,6 @@ export function About() {
                           <h3 className="font-mono text-xl font-black text-[var(--color-text-primary)] group-hover:text-[var(--color-accent-primary)] transition-colors mb-2">
                             {feature.title}
                           </h3>
-                          <div className="text-sm text-[var(--color-text-support)] font-mono mb-4">
-                            {feature.subtitle}
-                          </div>
                         </div>
                       </div>
                       <p className="text-[var(--color-text-secondary)] leading-relaxed">
@@ -215,21 +207,21 @@ export function About() {
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-transparent via-[var(--color-bg-secondary)]/20 to-transparent border-y border-[var(--color-border)] py-12">
           <div className="font-mono text-sm text-[var(--color-text-meta)] mb-4">
-            {'// READY TO START YOUR JOURNEY?'}
+            {`// ${t('about.cta.ready')}`}
           </div>
           <h3 className="font-mono text-2xl md:text-3xl font-black text-[var(--color-text-primary)] mb-6">
-            未来を創る仲間になりませんか？
+            {t('about.cta.question')}
           </h3>
           <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
             <a href="#curriculum">
               <button className="bg-[var(--color-accent-primary)] text-black px-8 py-4 font-mono font-medium hover:bg-[var(--color-accent-hover)] transition-all duration-200 border-2 border-[var(--color-accent-primary)] hover:border-[var(--color-accent-hover)] relative group">
-                <span className="relative z-10">LEARN_MORE()</span>
+                <span className="relative z-10">{t('about.cta.explore')}</span>
                 <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-200" />
               </button>
             </a>
             <a href="#contact">
               <button className="bg-transparent border-2 border-[var(--color-border)] text-[var(--color-text-primary)] hover:border-[var(--color-accent-primary)] hover:text-[var(--color-accent-primary)] px-8 py-4 font-mono font-medium transition-all duration-200 relative group overflow-hidden">
-                <span className="relative z-10">CONTACT_US()</span>
+                <span className="relative z-10">{t('about.cta.connect')}</span>
                 <div className="absolute inset-0 bg-[var(--color-accent-primary)] opacity-0 group-hover:opacity-5 transition-opacity duration-200" />
               </button>
             </a>
@@ -237,7 +229,7 @@ export function About() {
         </div>
 
         {/* Section Footer */}
-        <SectionFooter message="WHERE PEOPLE AND IDEAS SHAPE THE FUTURE" />
+        <SectionFooter message={t('about.footer')} />
       </div>
     </section>
   )
