@@ -27,35 +27,35 @@ export function About() {
 
   const stats = [
     { value: '2', label: '国', suffix: 'Countries', color: 'text-[var(--color-accent-primary)]' },
-    { value: '7+', label: '大学', suffix: 'Universities', color: 'text-[var(--color-terminal)]' },
-    { value: '1000+', label: '学生', suffix: 'Students', color: 'text-blue-500' },
-    { value: '∞', label: '可能性', suffix: 'Possibilities', color: 'text-[var(--color-accent-primary)]' }
+    { value: '7+', label: 'パートナー', suffix: 'Partners', color: 'text-[var(--color-terminal)]' },
+    { value: '1000+', label: 'メンバー', suffix: 'Members', color: 'text-blue-500' },
+    { value: '∞', label: 'アイデア', suffix: 'Ideas', color: 'text-[var(--color-accent-primary)]' }
   ]
 
   const features = [
     {
       icon: '🌐',
-      title: 'Cross-Border Innovation',
-      subtitle: '国境を越えたイノベーション',
-      description: '日本の技術力とインドネシアの成長力を融合し、両国の未来を切り開く新しいデジタル人材を育成します。'
+      title: 'Cultural Bridge',
+      subtitle: '文化の架け橋',
+      description: '日本とインドネシアの多様な文化と価値観を尊重し、異なる背景を持つ人々が相互理解を深めながら共創できる環境を提供します。'
     },
     {
-      icon: '🤖',
-      title: 'AI-Driven Education',
-      subtitle: 'AI駆動型教育',
-      description: '最新のAI技術を活用した個別最適化された学習プログラムで、一人ひとりの可能性を最大限に引き出します。'
-    },
-    {
-      icon: '🚀',
-      title: 'Future-Ready Skills',
-      subtitle: '未来対応スキル',
-      description: '変化の激しいテック業界で求められる実践的なスキルセットを体系的に習得し、即戦力として活躍できます。'
+      icon: '💡',
+      title: 'Ideas Exchange',
+      subtitle: 'アイデア交流',
+      description: '革新的なアイデアと創造的な発想を自由に共有できるプラットフォームで、個人の可能性と集合知の力を最大限に活用します。'
     },
     {
       icon: '🤝',
-      title: 'Global Partnership',
-      subtitle: 'グローバルパートナーシップ',
-      description: '産学官の強力な連携により、持続可能で包括的な人材育成エコシステムを構築しています。'
+      title: 'Collaborative Learning',
+      subtitle: '協働学習',
+      description: '共に学び、共に成長する学習コミュニティで、参加者同士が互いに教え合い、支え合いながらスキルを向上させます。'
+    },
+    {
+      icon: '🌟',
+      title: 'Future Creation',
+      subtitle: '未来創造',
+      description: '人とアイデアの力を結集し、両国そして世界のより良い未来を共に創造する持続可能なコミュニティを構築します。'
     }
   ]
 
@@ -88,8 +88,8 @@ export function About() {
         <SectionHeader 
           index="01"
           category="ABOUT"
-          title="</e2e>Worldとは"
-          description="End-to-End Digital Talent Development - 日本とインドネシアを繋ぐ、次世代デジタル人材育成プロジェクト。技術革新と教育イノベーションの融合により、両国の持続的な発展を目指します。"
+          title="PAI: People and Ideasとは"
+          description="多様な人の知恵や文化を結びつけるコミュニティプラットフォーム。日本とインドネシアの人々とアイデアが出会い、共創し、より明るい未来を形作る場を提供します。"
         />
         {/* Mission Statement */}
         <div className="mb-20">
@@ -105,10 +105,10 @@ export function About() {
                 {'// MISSION STATEMENT'}
               </div>
               <blockquote className="text-xl md:text-2xl text-[var(--color-text-primary)] leading-relaxed font-light">
-                &ldquo;デジタル技術で両国の未来を創造し、
+                &ldquo;多様な文化と知恵を持つ人々が出会い、
                 <br />
-                <span className="text-[var(--color-accent-primary)] font-medium">人と人、技術と技術、夢と現実</span>
-                を繋ぐ架け橋となる。&rdquo;
+                <span className="text-[var(--color-accent-primary)] font-medium">アイデアを共有し、共に学び、共に創る</span>
+                コミュニティを築く。&rdquo;
               </blockquote>
             </div>
           </div>
@@ -237,7 +237,7 @@ export function About() {
         </div>
 
         {/* Section Footer */}
-        <SectionFooter message="INNOVATION BEGINS WITH COLLABORATION" />
+        <SectionFooter message="WHERE PEOPLE AND IDEAS SHAPE THE FUTURE" />
       </div>
     </section>
   )

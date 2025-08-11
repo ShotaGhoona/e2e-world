@@ -1,104 +1,179 @@
 'use client'
 
 import React from 'react'
-import { ParticleBackground } from '@/components/ParticleBackground'
 import { SectionFooter } from '@/components/SectionFooter'
 import { SectionHeader } from '@/components/SectionHeader'
 
 export function Partners() {
-  const partnersData = [
+  const universitiesData = [
     {
-      title: 'STARUP',
-      role: '技術革新パートナー',
-      description: '最新技術の研究開発と実践的なカリキュラム設計を担当。業界のトレンドを反映した実用的なプログラムを提供し、学習者が現場で即戦力となれるよう支援します。',
-      type: 'innovation' as const,
-      logoPlaceholder: '/partner/starup.png'
+      name: 'STIKOM Bali',
+      nameEn: 'STIKOM Bali',
+      location: 'バリ, インドネシア',
+      logo: '/uni/stikom-bali.webp',
+      specialty: 'コンピューター・情報技術'
     },
     {
-      title: 'サクラネシア財団',
-      role: '教育支援パートナー',
-      description: '教育資金の提供と学習環境の整備を通じて、質の高い教育機会を創出。奨学金制度や施設提供により、多くの学習者がプログラムに参加できる基盤を構築します。',
-      type: 'education' as const,
-      logoPlaceholder: '/partner/sakuranesia.png'
+      name: 'UIN Jakarta',
+      nameEn: 'Universitas Islam Negeri Syarif Hidayatullah Jakarta',
+      location: 'ジャカルタ, インドネシア', 
+      logo: '/uni/uin-jakarta.jpg',
+      specialty: 'イスラム総合大学'
     },
     {
-      title: '行政機関',
-      role: '政策支援パートナー',
-      description: 'デジタル人材育成に関する政策立案と制度整備を推進。国際的な人材交流促進や資格認定制度の構築により、持続可能な人材育成エコシステムを支援します。',
-      type: 'government' as const,
-      logoPlaceholder: '/partner/gyousei.png'
+      name: 'UPI',
+      nameEn: 'Universitas Pendidikan Indonesia',
+      location: 'バンドン, インドネシア',
+      logo: '/uni/upi.png',
+      specialty: '教育・工学'
+    },
+    {
+      name: 'UNLA Bandung',
+      nameEn: 'Universitas Langlangbuana Bandung',
+      location: 'バンドン, インドネシア',
+      logo: '/uni/unla-bandung.png',
+      specialty: '総合大学'
+    },
+    {
+      name: 'UI FMIPA',
+      nameEn: 'Universitas Indonesia - FMIPA',
+      location: 'ジャカルタ, インドネシア',
+      logo: '/uni/ui-fmipa.png',
+      specialty: '数学・自然科学'
+    },
+    {
+      name: 'ITS',
+      nameEn: 'Institut Teknologi Sepuluh Nopember',
+      location: 'スラバヤ, インドネシア',
+      logo: '/uni/its.png',
+      specialty: '工学・技術'
+    },
+    {
+      name: 'UNEJ',
+      nameEn: 'Universitas Jember',
+      location: 'ジャンベル, インドネシア',
+      logo: '/uni/unej.webp',
+      specialty: '総合大学'
     }
   ]
 
   return (
-    <section id="partners" className="py-24 bg-[var(--color-bg-primary)] relative overflow-hidden">
-      {/* Particle Background */}
-      <ParticleBackground className="left-1/3 top-3/5 w-full h-full scale-150 -translate-x-1/2 -translate-y-1/2" />
+    <section id="universities" className="py-24 bg-[var(--color-bg-primary)] relative">
+      {/* Grid Background */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="max-w-7xl mx-auto h-full">
+          <div className="grid grid-cols-12 h-full">
+            {Array.from({ length: 12 }, (_, i) => (
+              <div key={i} className="border-r border-[var(--color-border-subtle)] last:border-r-0" />
+            ))}
+          </div>
+        </div>
+      </div>
 
-      <div className="max-w-7xl mx-auto px-8 relative z-10">
+      <div className="relative z-10">
         {/* Section Header */}
-        <SectionHeader 
-          index="03"
-          category="PARTNERS"
-          title="パートナー"
-          description="産学官連携により、包括的な人材育成エコシステムを構築しています。"
-        />
+        <div className="max-w-7xl mx-auto px-8">
+          <SectionHeader 
+            index="04"
+            category="PARTNERS"
+            title="パートナー"
+            description="インドネシアの主要大学と連携し、実践的なエンジニア育成プログラムを展開しています。"
+          />
+        </div>
 
-        {/* Partnership Connection Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
-          <div className="hidden lg:block lg:col-span-4"></div>
-          {/* Partners Vertical Stack */}
-          <div className="col-span-1 lg:col-span-8 space-y-6">
-            {partnersData.map((partner, index) => {
-              const roleColors = {
-                innovation: 'text-[var(--color-accent-primary)] border-[var(--color-accent-primary)]',
-                education: 'text-[var(--color-terminal)] border-[var(--color-terminal)]',
-                government: 'text-blue-500 border-blue-500'
-              }
-              
-              return (
-                <div key={index} className={`flex flex-col md:flex-row items-start md:items-center border-l-4 ${roleColors[partner.type].split(' ')[1]} transition-all duration-200 group relative`}>
-                  
-                  {/* Connection Indicator - Hidden on mobile */}
-                  <div className={`absolute -left-6 w-12 h-px ${roleColors[partner.type].split(' ')[1].replace('border-', 'bg-')} opacity-60 hidden md:block`} />
-                  
-                  {/* Logo Section */}
-                  <div className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24 bg-[var(--color-bg-secondary)]/50 border border-[var(--color-border)] flex items-center justify-center m-4">
-                    {partner.logoPlaceholder ? (
-                      <img 
-                        src={partner.logoPlaceholder} 
-                        alt={`${partner.title} logo`}
-                        className="max-h-12 max-w-16 md:max-h-16 md:max-w-20 object-contain opacity-80"
-                      />
-                    ) : (
-                      <div className="text-[var(--color-text-meta)] font-mono text-xs font-bold text-center">
-                        {partner.title}
-                      </div>
-                    )}
-                  </div>
+        {/* Universities Infinite Scroll */}
+        <div className="mb-16 overflow-hidden">
+          <div className="animate-scroll-x flex space-x-6">
+            {/* First set */}
+            {universitiesData.map((university, index) => (
+              <div 
+                key={`first-${index}`}
+                className="group bg-[var(--color-bg-primary)] border border-[var(--color-border)] hover:border-[var(--color-accent-primary)] transition-all duration-300 hover:bg-[var(--color-bg-secondary)]/30 relative overflow-hidden flex-shrink-0 w-80"
+              >
+                {/* Logo Section */}
+                <div className="aspect-square flex items-center justify-center p-8 bg-[var(--color-bg-secondary)]/20">
+                  <img 
+                    src={university.logo}
+                    alt={`${university.name} logo`}
+                    className="max-w-full max-h-full object-contain transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
 
-                  {/* Content */}
-                  <div className="flex-1 p-4 md:p-6">
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3 space-y-2 sm:space-y-0">
-                      <h3 className="text-lg md:text-xl font-black text-[var(--color-text-primary)] font-mono">
-                        {partner.title}
-                      </h3>
-                      <span className={`self-start sm:self-auto px-3 py-1 text-xs font-mono border ${roleColors[partner.type]} bg-[var(--color-bg-secondary)]/50 rounded whitespace-nowrap`}>
-                        {partner.role}
-                      </span>
-                    </div>
-                    <p className="text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed">
-                      {partner.description}
+                {/* Info Section */}
+                <div className="p-6 space-y-3">
+                  <div className="space-y-2">
+                    <h3 className="font-mono text-lg font-black text-[var(--color-text-primary)]">
+                      {university.name}
+                    </h3>
+                    <p className="text-xs text-[var(--color-text-support)] leading-relaxed">
+                      {university.nameEn}
                     </p>
                   </div>
+
+                  <div className="space-y-2">
+                    <div className="flex items-center text-sm text-[var(--color-text-secondary)]">
+                      <span className="font-mono text-xs text-[var(--color-text-meta)] mr-2">[LOC]</span>
+                      {university.location}
+                    </div>
+                    <div className="flex items-center text-sm text-[var(--color-text-secondary)]">
+                      <span className="font-mono text-xs text-[var(--color-text-meta)] mr-2">[SPE]</span>
+                      {university.specialty}
+                    </div>
+                  </div>
                 </div>
-              )
-            })}
+
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-[var(--color-accent-primary)] opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
+              </div>
+            ))}
+            
+            {/* Second set for infinite loop */}
+            {universitiesData.map((university, index) => (
+              <div 
+                key={`second-${index}`}
+                className="group bg-[var(--color-bg-primary)] border border-[var(--color-border)] hover:border-[var(--color-accent-primary)] transition-all duration-300 hover:bg-[var(--color-bg-secondary)]/30 relative overflow-hidden flex-shrink-0 w-80"
+              >
+                {/* Logo Section */}
+                <div className="aspect-square flex items-center justify-center p-8 bg-[var(--color-bg-secondary)]/20">
+                  <img 
+                    src={university.logo}
+                    alt={`${university.name} logo`}
+                    className="max-w-full max-h-full object-contain transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+
+                {/* Info Section */}
+                <div className="p-6 space-y-3">
+                  <div className="space-y-2">
+                    <h3 className="font-mono text-lg font-black text-[var(--color-text-primary)]">
+                      {university.name}
+                    </h3>
+                    <p className="text-xs text-[var(--color-text-support)] leading-relaxed">
+                      {university.nameEn}
+                    </p>
+                  </div>
+
+                  <div className="space-y-2">
+                    <div className="flex items-center text-sm text-[var(--color-text-secondary)]">
+                      <span className="font-mono text-xs text-[var(--color-text-meta)] mr-2">[LOC]</span>
+                      {university.location}
+                    </div>
+                    <div className="flex items-center text-sm text-[var(--color-text-secondary)]">
+                      <span className="font-mono text-xs text-[var(--color-text-meta)] mr-2">[SPE]</span>
+                      {university.specialty}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-[var(--color-accent-primary)] opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
+              </div>
+            ))}
           </div>
         </div>
 
         {/* Section Footer */}
-        <SectionFooter message="STRONGER TOGETHER, BRIGHTER FUTURE" />
+        <SectionFooter message="CONNECTING KNOWLEDGE ACROSS BORDERS" />
       </div>
     </section>
   )

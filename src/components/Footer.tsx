@@ -2,10 +2,10 @@ import React from 'react'
 
 export function Footer() {
   const navigationItems = [
-    { label: 'e2eとは', href: '#about', index: '01' },
+    { label: 'PAIとは', href: '#about', index: '01' },
     { label: '学べること', href: '#curriculum', index: '02' },
-    { label: 'パートナー', href: '#partners', index: '03' },
-    { label: '参画大学', href: '#universities', index: '04' },
+    { label: '協力団体', href: '#partners', index: '03' },
+    { label: 'パートナー', href: '#universities', index: '04' },
     { label: 'お知らせ', href: '#news', index: '05' },
     { label: 'お問い合わせ', href: '#contact', index: '06' }
   ]
@@ -32,16 +32,16 @@ export function Footer() {
           {/* Logo and Description */}
           <div className="lg:col-span-8 space-y-6">
             <div>
-              <div className="font-mono font-black text-3xl mb-4">
-                <span className="text-[var(--color-text-primary)]">&lt;</span>
-                <span className="text-[var(--color-accent-primary)]">/</span>
-                <span className="text-[var(--color-text-primary)]">e2e&gt;</span>
-                <span className="text-xl text-[var(--color-text-primary)] ml-2">World</span>
+              <div className="flex items-center space-x-2 mb-4">
+                <div className="font-mono font-black text-3xl text-[var(--color-accent-primary)]">
+                  PAI
+                </div>
+                <div className="font-mono text-xl text-[var(--color-text-primary)]">: People and Ideas</div>
               </div>
               <p className="text-[var(--color-text-secondary)] leading-relaxed">
-                日本とインドネシアの架け橋となるAI人材育成プロジェクト。
+                多様な人の知恵や文化を結びつけるコミュニティプラットフォーム。
                 <br />
-                産学官連携により、次世代のデジタル人材を育成し、両国の持続的な発展に貢献します。
+                日本とインドネシアの人々とアイデアが出会い、共創し、より明るい未来を形作る場を提供します。
               </p>
             </div>
 
@@ -49,7 +49,7 @@ export function Footer() {
             <div className="space-y-2">
               <div className="font-mono text-sm text-[var(--color-text-meta)]">CONTACT</div>
               <div className="text-[var(--color-text-secondary)]">
-                <div>Email: info@e2e-world.com</div>
+                <div>Email: info@pai-world.com</div>
               </div>
             </div>
           </div>
@@ -83,7 +83,7 @@ export function Footer() {
         <div className="py-8 border-t border-[var(--color-border)]">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-[var(--color-text-support)] font-mono">
-              © 2025 e2e World. All rights reserved.
+              © 2025 PAI: People and Ideas. All rights reserved.
             </div>
             
             <div className="flex items-center space-x-6 text-sm text-[var(--color-text-support)] font-mono">

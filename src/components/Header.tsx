@@ -3,10 +3,10 @@ import React, { useState } from 'react'
 import { ThemeToggle } from './ThemeToggle'
 
 const navigationItems = [
-  { label: 'e2eとは', href: '#about', index: '01' },
+  { label: 'PAIとは', href: '#about', index: '01' },
   { label: '学べること', href: '#curriculum', index: '02' },
-  { label: 'パートナー', href: '#partners', index: '03' },
-  { label: '参画大学', href: '#universities', index: '04' },
+  { label: '協力団体', href: '#partners', index: '03' },
+  { label: 'パートナー', href: '#universities', index: '04' },
   { label: 'お知らせ', href: '#news', index: '05' },
 ]
 
@@ -30,13 +30,11 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-8 relative z-10">
         <div className="flex items-center justify-between h-20">
         {/* Logo */}
-        <div className={`flex items-center space-x-4`}>
-          <div className="font-mono font-black text-2xl">
-            <span className="text-[var(--color-text-primary)]">&lt;</span>
-            <span className="text-[var(--color-accent-primary)]">/</span>
-            <span className="text-[var(--color-text-primary)]">e2e&gt;</span>
+        <div className={`flex items-center space-x-2`}>
+          <div className="font-mono font-black text-2xl text-[var(--color-accent-primary)]">
+            PAI
           </div>
-          <div className="font-mono text-2xl text-[var(--color-text-primary)]">World</div>
+          <div className="font-mono text-lg text-[var(--color-text-primary)]">: People and Ideas</div>
         </div>
         
         {/* Navigation */}
@@ -115,11 +113,11 @@ export function Header() {
           {/* Menu Header */}
           <div className="relative z-10 px-8 py-6 border-b border-[var(--color-border)]">
             <div className="flex items-center justify-between">
-              <div className="font-mono font-black text-xl">
-                <span className="text-[var(--color-text-primary)]">&lt;</span>
-                <span className="text-[var(--color-accent-primary)]">/</span>
-                <span className="text-[var(--color-text-primary)]">e2e&gt;</span>
-                <span className="text-base text-[var(--color-text-primary)] ml-2">World</span>
+              <div className="flex items-center space-x-2">
+                <div className="font-mono font-black text-xl text-[var(--color-accent-primary)]">
+                  PAI
+                </div>
+                <div className="font-mono text-sm text-[var(--color-text-primary)]">: People and Ideas</div>
               </div>
               <button 
                 onClick={() => setIsMenuOpen(false)}
