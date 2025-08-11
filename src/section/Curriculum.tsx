@@ -6,12 +6,18 @@ import { SectionHeader } from '@/components/SectionHeader'
 import { useLanguage } from '@/contexts/LanguageContext'
 import coursesData from '@/data/courses.json'
 
-interface SkillCardProps {
+type Level = 'beginner' | 'intermediate' | 'advanced'
+
+interface CourseData {
   title: string
   description: string
   technologies: string[]
-  level: 'beginner' | 'intermediate' | 'advanced'
+  level: Level
   duration: string
+  learningContent: string[]
+}
+
+interface SkillCardProps extends CourseData {
   isActive: boolean
   onClick: () => void
 }
@@ -95,7 +101,7 @@ export function Curriculum() {
   const [activeCard, setActiveCard] = useState<number | null>(null)
   const [mounted, setMounted] = useState(false)
   const { t, language } = useLanguage()
-  const curriculumData = coursesData[language] || coursesData.en
+  const curriculumData = (coursesData as Record<string, CourseData[]>)[language] || coursesData.en
 
   useEffect(() => {
     setMounted(true)
